@@ -7,19 +7,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/inputWeight"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputWidth"
+        app:layout_constraintVertical_bias="0.1"
+        tools:text="Вес 1 коробки" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="204dp"
+        android:layout_height="55dp"
         android:background="#FFFFFF"
         android:text="Введите значения"
+        android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.029" />
 
     <EditText
         android:id="@+id/inputLenght"
@@ -47,6 +64,19 @@
         tools:text="Высота м3" />
 
     <EditText
+        android:id="@+id/inputBoxNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputWidth"
+        tools:text="Колличество коробок" />
+
+    <EditText
         android:id="@+id/inputWidth"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -62,41 +92,52 @@
         android:id="@+id/calculateButton"
         android:layout_width="145dp"
         android:layout_height="78dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="124dp"
         android:text="Посчитать"
         android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputHeight" />
+        app:layout_constraintTop_toBottomOf="@+id/volumeResult" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="251dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="76dp"
+        android:dropDownWidth="match_parent"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputWeight"
+        app:layout_constraintVertical_bias="0.967" />
 
     <TextView
         android:id="@+id/volumeResult"
         android:layout_width="78dp"
         android:layout_height="40dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Обьем: "
         app:layout_constraintBottom_toTopOf="@+id/calculateButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputHeight"
-        app:layout_constraintVertical_bias="0.562" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
         android:text="Введите значения и нажмите кнопку посчитать"
         app:layout_constraintBottom_toTopOf="@+id/volumeResult"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputHeight"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/volumeSum"
@@ -112,6 +153,33 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/volumeResult"
         app:layout_constraintTop_toTopOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.225"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/destiny"
+        android:layout_width="78dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="Плотность"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volumeResult"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/destinySum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="55dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+        app:layout_constraintStart_toStartOf="@+id/destiny"
+        app:layout_constraintTop_toTopOf="@+id/volumeSum" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
