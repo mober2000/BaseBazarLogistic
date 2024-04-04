@@ -2,6 +2,7 @@ package com.example.basebazarlogistic.ui
 
 import android.app.Activity
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import com.example.basebazarlogistic.R
@@ -17,6 +18,7 @@ class Buttons(private val activity: Activity) {
     var courseDollarButton: EditText = activity.findViewById(R.id.dollar_course)
     var numberBoxesProductButton: EditText = activity.findViewById(R.id.number_boxes)
     var numberPlacePackButton: EditText = activity.findViewById(R.id.number_place_pack)
+    var pressButton: Button = activity.findViewById(R.id.calculate_button)
     val pack: Spinner = activity.findViewById(R.id.pack)
     val category: Spinner = activity.findViewById(R.id.category)
     val delivery_speed: Spinner = activity.findViewById(R.id.delivery_speed)
