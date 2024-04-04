@@ -35,7 +35,21 @@ class Packs (activity: Activity){
         Log.d("MainActivity", "weightAll: $weightAll")
 
         textViews.weightAllPackText.text = weightAll.toString()
+    }
+    fun calculateCoastPack(){
+        val courseDollar = buttons.courseDollarButton.text.toString().toDoubleOrNull() ?: 0.0
+        val pack = buttons.pack.selectedItem.toString()
 
+        val coastPack: Double = when (pack) {
+            "Скотч" -> 5 * courseDollar
+            "Бумажная обрешетка" -> 10 * courseDollar
+            "Деревянная обрешетка" -> 15 * courseDollar
+            "Палет" -> 40 * courseDollar
+            else -> error("Неизвестный материал") // Может быть изменено на другое значение по умолчанию, если необходимо
+        }
+        textViews.coastOnePackText.text = coastPack.toString()
+    }
+    fun calculateCoastSumPack(){
 
     }
 }

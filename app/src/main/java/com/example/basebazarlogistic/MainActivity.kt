@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
             packs.calculatePackWeightText()
             packs.calculateAllWeightPack()
+            packs.calculateCoastPack()
 
             // Ваш код, который выполнится при нажатии на кнопку
             Toast.makeText(this, "Посчитали", Toast.LENGTH_SHORT).show()
