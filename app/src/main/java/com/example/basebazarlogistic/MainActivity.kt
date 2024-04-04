@@ -43,12 +43,13 @@ class MainActivity : AppCompatActivity() {
             packs.calculatePackWeightText()
             packs.calculateAllWeightPack()
             packs.calculateCoastPack()
+            packs.calculateCoastSumPack()
+            packs.calculateUnloadCoast()
 
             // Ваш код, который выполнится при нажатии на кнопку
             Toast.makeText(this, "Посчитали", Toast.LENGTH_SHORT).show()
 
         }
-
         buttons.dropDownPack()
         buttons.dropDownCategory()
         buttons.dropDeliverySpeed()

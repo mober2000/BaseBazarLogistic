@@ -4,6 +4,7 @@ import android.app.Activity
 import android.util.Log
 import com.example.basebazarlogistic.ui.Buttons
 import com.example.basebazarlogistic.ui.TextViews
+import kotlin.time.times
 
 class Packs (activity: Activity){
     val buttons = Buttons(activity)
@@ -50,6 +51,17 @@ class Packs (activity: Activity){
         textViews.coastOnePackText.text = coastPack.toString()
     }
     fun calculateCoastSumPack(){
+        val numberPlacePack = buttons.numberPlacePackButton.text.toString().toDoubleOrNull() ?: 0.0
+        val coastOnePack = textViews.coastOnePackText.text.toString().toDoubleOrNull() ?: 0.0
 
+        val coastSumPack = numberPlacePack * coastOnePack
+        textViews.coastPackRubbleText.text = coastSumPack.toString()
+    }
+    fun calculateUnloadCoast(){
+        val courseDollar = buttons.courseDollarButton.text.toString().toDoubleOrNull() ?: 0.0
+        val numberPlacePack = buttons.numberPlacePackButton.text.toString().toDoubleOrNull() ?: 0.0
+
+        val unloadCoast = 3 * numberPlacePack * courseDollar
+        textViews.unloadSumCoastText.text = unloadCoast.toString()
     }
 }

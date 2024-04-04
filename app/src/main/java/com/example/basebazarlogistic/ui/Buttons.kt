@@ -23,6 +23,8 @@ class Buttons(private val activity: Activity) {
     val category: Spinner = activity.findViewById(R.id.category)
     val delivery_speed: Spinner = activity.findViewById(R.id.delivery_speed)
 
+
+
     fun dropDownPack(){
         // Массив строк для отображения в списке
         val options = arrayOf("Скотч", "Бумажная обрешетка", "Деревянная обрешетка", "Палет")
