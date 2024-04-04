@@ -273,13 +273,13 @@
             android:id="@+id/dollar_course"
             android:layout_width="261dp"
             android:layout_height="78dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="46dp"
             android:ems="10"
             android:inputType="numberDecimal"
             android:text="Курс Доллара"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
         <EditText
             android:id="@+id/yuan_course"
@@ -704,6 +704,33 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/result_delivery_text" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="161dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="124dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo2" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="74dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Калькулятор доставки"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
