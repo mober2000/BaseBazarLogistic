@@ -264,7 +264,7 @@
             android:layout_marginEnd="72dp"
             android:ems="10"
             android:inputType="numberDecimal"
-            android:text="Длина"
+            android:text="0.4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/yuan_course" />
@@ -276,7 +276,7 @@
             android:layout_marginTop="46dp"
             android:ems="10"
             android:inputType="numberDecimal"
-            android:text="Курс Доллара"
+            android:text="96"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView30" />
@@ -288,7 +288,7 @@
             android:layout_marginTop="25dp"
             android:ems="10"
             android:inputType="numberDecimal"
-            android:text="Курс Юаня"
+            android:text="13"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dollar_course" />
@@ -300,7 +300,7 @@
             android:layout_marginTop="20dp"
             android:ems="10"
             android:inputType="numberDecimal"
-            android:text="Ширина"
+            android:text="0.46"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/length" />
@@ -312,7 +312,7 @@
             android:layout_marginTop="24dp"
             android:ems="10"
             android:inputType="numberDecimal"
-            android:text="Высота"
+            android:text="0.46"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/width" />
@@ -324,7 +324,7 @@
             android:layout_marginTop="25dp"
             android:ems="10"
             android:inputType="numberDecimal"
-            android:text="Колличество коробок"
+            android:text="35"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/heigth" />
@@ -336,7 +336,7 @@
             android:layout_marginTop="25dp"
             android:ems="10"
             android:inputType="numberDecimal"
-            android:text="Вес одной коробки"
+            android:text="12"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/number_boxes" />
@@ -348,7 +348,7 @@
             android:layout_marginTop="28dp"
             android:ems="10"
             android:inputType="numberSigned"
-            android:text="Колличество мест"
+            android:text="10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pack" />
@@ -360,7 +360,7 @@
             android:layout_marginTop="25dp"
             android:ems="10"
             android:inputType="numberSigned"
-            android:text="Цена товара в Юанях"
+            android:text="18435"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/delivery_speed" />

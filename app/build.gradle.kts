@@ -38,6 +38,8 @@ android {
 dependencies {
 
     implementation("org.jsoup:jsoup:1.14.3")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation("org.mockito:mockito-testng:0.5.2")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -45,5 +47,4 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }
