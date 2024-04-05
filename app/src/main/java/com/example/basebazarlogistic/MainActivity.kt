@@ -9,8 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.basebazarlogistic.calculators.CoastsProductAndDelivery
-import com.example.basebazarlogistic.calculators.Packs
-import com.example.basebazarlogistic.calculators.VolumeAndDestiny
+import com.example.basebazarlogistic.methods.PreOrderCalculateMethods
 import com.example.basebazarlogistic.ui.Buttons
 import com.example.basebazarlogistic.ui.TextViews
 
@@ -29,24 +28,17 @@ class MainActivity : AppCompatActivity() {
 
         val buttons = Buttons(this)
         val textViews = TextViews(this)
-        val volumeAndDestiny = VolumeAndDestiny(this)
         val coastsProductAndDelivery = CoastsProductAndDelivery(this)
-        val packs = Packs(this)
         val tariff = Tariff(this)
+        val preOrderCalculateMethods = PreOrderCalculateMethods(this)
 
         // Устанавливаем обработчик нажатия на кнопку
         buttons.pressButton.setOnClickListener {
-            volumeAndDestiny.calculateVolume()
-            volumeAndDestiny.calculateDestiny()
+            preOrderCalculateMethods.calculateVolumeAndDestiny()
 
             coastsProductAndDelivery.calculateRubbleCoastProduct()
             coastsProductAndDelivery.calculateDollarCoastProduct()
-
-            packs.calculatePackWeightText()
-            packs.calculateAllWeightPack()
-            packs.calculateCoastPack()
-            packs.calculateCoastSumPack()
-            packs.calculateUnloadCoast()
+            preOrderCalculateMethods.calculatePack()
 
             textViews.tariffKgDollarText.text = tariff.calculateTariffCoast(
                 buttons.category.selectedItem.toString(),
