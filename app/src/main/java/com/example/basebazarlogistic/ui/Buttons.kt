@@ -36,8 +36,6 @@ class Buttons(private val activity: Activity) {
         pack.adapter = adapter
     }
     fun dropDownCategory(){
-        // Получаем ссылку на Spinner по его id
-
         // Массив строк для отображения в списке
         val options = arrayOf("Хозтовары", "Одежда", "Электроника", "Poizon")
         // Создаем адаптер

@@ -1,5 +1,6 @@
 package com.example.basebazarlogistic
 
+import Tariff
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Toast
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         val volumeAndDestiny = VolumeAndDestiny(this)
         val coastsProductAndDelivery = CoastsProductAndDelivery(this)
         val packs = Packs(this)
+        val tariff = Tariff(this)
 
         // Устанавливаем обработчик нажатия на кнопку
         buttons.pressButton.setOnClickListener {
@@ -45,6 +47,11 @@ class MainActivity : AppCompatActivity() {
             packs.calculateCoastPack()
             packs.calculateCoastSumPack()
             packs.calculateUnloadCoast()
+
+            textViews.tariffKgDollarText.text = tariff.calculateTariffCoast(
+                buttons.category.selectedItem.toString(),
+                buttons.delivery_speed.selectedItem.toString(),
+                textViews.destinyText.text.toString().toDoubleOrNull() ?: 0.0).toString()
 
             // Ваш код, который выполнится при нажатии на кнопку
             Toast.makeText(this, "Посчитали", Toast.LENGTH_SHORT).show()

@@ -12,7 +12,6 @@ class Packs (activity: Activity){
 
     fun calculatePackWeightText(){
         val pack = buttons.pack.selectedItem.toString()
-
         val weightProductValue: Int = when (pack) {
             "Скотч" -> 1
             "Бумажная обрешетка" -> 2
@@ -24,7 +23,6 @@ class Packs (activity: Activity){
         textViews.weightOnePackText.text = weightProductValue.toString()
     }
     fun calculateAllWeightPack(){
-
         val numberPlacePack = buttons.numberPlacePackButton.text.toString().toDoubleOrNull() ?: 0.0
         val weightOnePack = textViews.weightOnePackText.text.toString().toDoubleOrNull() ?: 0.0
 
